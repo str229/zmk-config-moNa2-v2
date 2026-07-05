@@ -67,6 +67,8 @@
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
+    input-processors = 
+    <&zip_temp_layer 5 500>;      // ← 追加：トラックボールが動いたらレイヤー5を自動有効化、500ms無操作で自動解除
 
     scroller {
         layers = <3>;
